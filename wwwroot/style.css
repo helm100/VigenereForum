@@ -1,0 +1,54 @@
+html,
+body,
+.root {
+    height: 90%;
+}
+
+.message-box {
+    padding: 10px 0;
+    margin: 10px 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    flex-grow: 2;
+}
+
+.message-panel {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+}
+
+.message-input {
+    display: flex;
+}
+
+.message-textbox {
+    width: 40%;
+}
+
+.key-control-cont {
+    margin: 30px 0 10px 0;
+}
+
+.color-button {
+    align-self: flex-end;
+    background-color: blueviolet;
+}
+
+.message {
+    margin: 0 3px 10px 3px;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 3px 5px 5px 5px;
+}
+
+.color-button {
+    float: right;
+}
+
+.refresh-button {
+    float: right;
+}
+

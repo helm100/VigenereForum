@@ -1,0 +1,23 @@
+{
+  "name": "vigenere_forum",
+  "version": "1.0.0",
+  "description": "An open, anonymous forum encrypted by the Vigenere algorithm",
+  "main": "app.jsx",
+  "scripts": {
+    "debug": "esbuild app.jsx --bundle --sourcemap --outfile=../wwwroot/bundle.js",
+    "build": "esbuild app.jsx --bundle --minify --outfile=../wwwroot/bundle.js"
+  },
+  "keywords": [
+    "vigenere",
+    "forum"
+  ],
+  "author": "helm100",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.15.12"
+  }
+}
