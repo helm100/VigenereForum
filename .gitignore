@@ -1,6 +1,6 @@
 js/node_modules
 js/package-lock.json
-wwwroot/php/db/*
+wwwroot/db/*.db
 wwwroot/php/vendor
 wwwroot/php/composer.lock
 wwwroot/bundle*
