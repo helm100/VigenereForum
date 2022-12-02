@@ -33,8 +33,14 @@ body,
 }
 
 .color-button {
-    align-self: flex-end;
+    float: right;
     background-color: blueviolet;
+}
+
+.about-link {
+    float: right;
+    width: 20px;
+    margin-left: 10px;
 }
 
 .message {
@@ -42,10 +48,6 @@ body,
     padding: 10px;
     width: fit-content;
     border-radius: 3px 5px 5px 5px;
-}
-
-.color-button {
-    float: right;
 }
 
 .refresh-button {

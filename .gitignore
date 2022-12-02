@@ -3,3 +3,4 @@ js/package-lock.json
 wwwroot/php/vendor
 wwwroot/php/composer.lock
 wwwroot/bundle*
+wwwroot/*.svg
