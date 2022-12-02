@@ -3,7 +3,8 @@ import { createRoot } from 'react-dom/client';
 import * as Callers from './callers';
 import MessagePanel from './components/messagePanel';
 import { ColorButton } from "./components/colorButton";
-import { TextInput, Button } from './components/controls'
+import { TextInput, Button } from './components/controls';
+import InfoSvg from './info2.svg';
 
 const App = () => {
     const [channelId, setChannelId] = useState(null);
@@ -21,6 +22,7 @@ const App = () => {
 
     return (<>
         <label htmlFor="chnlInput">Channel name: </label>
+        <a href='https://github.com/helm100/VigenereForum' target='_blank'><img src={InfoSvg} className='about-link'></img></a>
         <ColorButton id={"colorBtn"} name="colors!" className="color-button" setColors={setColors} />
         <div className='channel-input'>
             <TextInput id="chnlInput" initStr={channelNameInput} setter={setChannelNameInput}></TextInput><br />

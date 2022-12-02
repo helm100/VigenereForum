@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 95.468 95.468" xmlns="http://www.w3.org/2000/svg" id="SvgInfoButton">
+	<g transform="translate(-53.838 -62.057)">
+		<circle cx="101.57" cy="109.79" r="41.887" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:8.433;stroke:currentColor"/>
+		<path d="m89.39 110.45s6.9079-6.1941 17.995-7.7528c5.1658 0.56688-6.5541 23.369-3.3575 25.802 1.4848 0.59949 7.089-2.3031 7.089-2.3031s3.6792-1.9681 2.3043 1.5698c-1.0049 2.5858-14.111 8.3039-19.301 9.4172-5.1899 1.1133 3.7745-26.497 3.7745-26.497s1.5418-3.5109-7.8945 2.501c-2.9306-0.67959-0.61-2.7372-0.61-2.7372z" style="stroke-width:.26298px;stroke:currentColor;fill:currentColor"/>
+		<ellipse transform="rotate(-22.915)" cx="62.449" cy="122.97" rx="7.3623" ry="5.9843" style="fill:currentColor"/>
+	</g>
+</svg>
