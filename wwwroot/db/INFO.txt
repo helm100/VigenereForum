@@ -1,0 +1,6 @@
+This folder should include an sqlite database file called VigenereForum.db, with the following schema:
+
+CREATE TABLE "Channel" ( "Id"	INTEGER, "Name"	TEXT NOT NULL COLLATE NOCASE, PRIMARY KEY("Id"));
+CREATE TABLE Message ( Id INTEGER PRIMARY KEY, ChannelId INTEGER NOT NULL, Message TEXT NOT NULL, CONSTRAINT FK_Message_Channel FOREIGN KEY (ChannelId) REFERENCES Channel(Id));
+
+By default, the .db file is not tracked by git (see .gitignore file).
