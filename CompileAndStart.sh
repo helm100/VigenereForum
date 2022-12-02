@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# Check if database file exists. If not, create one.
 cd wwwroot/db
 DATABASE=VigenereForum.db
 if [ ! -f "$DATABASE" ]; then
@@ -11,11 +12,13 @@ EOF
 fi
 cd ../..
 
+# Compose PHP files
 echo 'Composing PHP files...'
 cd wwwroot/php
 php composer.phar dump-autoload
 cd ../..
 
+# Bundle js files to a bundle.js file in wwwroot
 echo 'Bundling JavaScript files...'
 cd js
 if [ "$1" = "build" ]; then
