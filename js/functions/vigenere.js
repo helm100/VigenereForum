@@ -1,4 +1,5 @@
 export function process(message, key, encrypt) {
+    if (!message) return "";
     if (key === "") {
         return message;
     }
