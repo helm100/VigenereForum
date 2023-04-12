@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import * as Vigenere from '../functions/vigenere'
 
 function setCharAt(str, index, chr) {
     if (index > str.length - 1) return str;
@@ -12,7 +11,7 @@ const sleep = (time) => {
 
 var currentKey = "";
 
-export default function Message({ message, vKey, id, color, bgColor }) {
+export default function Message({ message, vKey, encryptFunction, id, color, bgColor }) {
 
     let procMsg = message + ""; //Vigenere.process(message, vKey, false);
 
@@ -20,10 +19,8 @@ export default function Message({ message, vKey, id, color, bgColor }) {
         const el = document.getElementById(id);
         const keyWhileUpdate = currentKey + "";
         const strLength = message.length;
-        const procMsg = Vigenere.process(message, vKey, false);
+        const procMsg = encryptFunction.function(message, vKey, false);
         const indices = [...Array(strLength).keys()];
-
-        // el.innerText = procMsg;
 
         for (let i = 1; i < 5 * strLength; i++) {
             const randInd1 = Math.floor(Math.random() * (strLength - 1));
@@ -33,7 +30,7 @@ export default function Message({ message, vKey, id, color, bgColor }) {
             indices[randInd2] = randVal1;
         }
 
-        console.log(indices);
+        //console.log(indices);
 
         for (let i = 0; i < indices.length; i++) {
             if (keyWhileUpdate != currentKey) {
@@ -48,7 +45,7 @@ export default function Message({ message, vKey, id, color, bgColor }) {
     useEffect(() => {
         currentKey = vKey;
         window.setTimeout(() => updateMessage(), 100);
-    }, [vKey]);
+    }, [vKey, encryptFunction]);
 
 
     return <div id={id} className="message" style={{ backgroundColor: bgColor, color: color }} >{procMsg}</div>
