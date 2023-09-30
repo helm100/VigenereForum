@@ -3,33 +3,33 @@
     "name": "Vigenere Forum",
     "icons": [
       {
-        "src": "/icons/icon.svg",
+        "src": "icons/icon.svg",
         "type": "image/svg+xml",
         "sizes": "any"
       },
       {
-        "src": "/icons/icon64.png",
+        "src": "icons/icon64.png",
         "type": "image/png",
         "sizes": "64x64"
       },
       {
-        "src": "/icons/icon192.png",
+        "src": "icons/icon192.png",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "/icons/iconMaskable.png",
+        "src": "icons/iconMaskable.png",
         "type": "image/png",
         "sizes": "192x192",
         "purpose": "maskable"
       },
       {
-        "src": "/icons/icon512.png",
+        "src": "icons/icon512.png",
         "type": "image/png",
         "sizes": "512x512"
       }
     ],
-    "start_url": "/",
+    "start_url": "/vigenere",
     "display": "standalone",
     "background_color": "#7cff8e",
     "theme_color": "#91008a",

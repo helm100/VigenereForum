@@ -59,7 +59,7 @@ class SQLiteQueryData {
 			return 'Incorrect password';
 		}
 
-		$stmt = $this->pdo->prepare('SELECT COUNT(Message.Message) AS [MessageCount], Channel.[Name] FROM Message INNER JOIN Channel GROUP BY ChannelId');
+		$stmt = $this->pdo->prepare('SELECT COUNT(Message.Message) AS [MessageCount], Channel.[Name] FROM Message INNER JOIN Channel ON Channel.Id = Message.ChannelId GROUP BY ChannelId');
 		$stmt->execute();
 		$usage = [];
 		while ($row = $stmt->fetch(\PDO::FETCH_ASSOC)) {
