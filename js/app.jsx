@@ -52,6 +52,11 @@ const App = () => {
     </>);
 }
 
+// Attach 'hidden' global function to retrieve usage info
+window["usageInfo"] = async (password) => {
+  const response = await Callers.getUsageInfo(password);
+  console.log(response);
+}
 
 const container = document.getElementById("root");
 const root = createRoot(container);

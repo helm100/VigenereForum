@@ -45,3 +45,16 @@ export function getChannelId(channelName) {
             return Number(res);
         });
 }
+
+export function getUsageInfo(password) {
+    return fetch(rootfolder + "getUsageInfo.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+        },
+        body: `password=${password}`
+    })
+        .then((response) => {
+            return response.text();
+        });
+}

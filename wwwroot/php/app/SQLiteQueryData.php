@@ -53,4 +53,22 @@ class SQLiteQueryData {
 		$channelId = $sqliteInsert->insertChannel($channelName);
 		return $channelId;
 	}
+
+	public function getUsageInfo($password) {
+		if($password != 'hiV1g!') {
+			return 'Incorrect password';
+		}
+
+		$stmt = $this->pdo->prepare('SELECT COUNT(Message.Message) AS [MessageCount], Channel.[Name] FROM Message INNER JOIN Channel GROUP BY ChannelId');
+		$stmt->execute();
+		$usage = [];
+		while ($row = $stmt->fetch(\PDO::FETCH_ASSOC)) {
+			$usage[] = [
+				$row['Name'],
+				$row['MessageCount']
+			];
+		}
+			
+		return $usage;
+	}
 }
